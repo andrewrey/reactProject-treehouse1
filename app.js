@@ -10,6 +10,7 @@ const Player = () => {
   return (
     <div className="player">
       <span className="player-name">Andrew</span>
+      <Counter />
     </div>
   );
 };
@@ -23,4 +24,15 @@ const Counter = () => {
     </div>
   );
 };
-ReactDOM.render(<Counter />, document.getElementById("root"));
+
+const App = () => {
+  return (
+    <div className="scoreboard">
+      <Header />
+      {/* Players List */}
+      <Player />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
