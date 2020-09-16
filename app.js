@@ -45,19 +45,20 @@ const Player = (prop) => {
   );
 };
 
-const Counter = (props) => {
-  let { score } = props;
-  return (
-    <div className="counter">
-      <button className="counter-action decrement">-</button>
-      <span className="counter-score">{score}</span>
-      <button className="counter-action increment">+</button>
-    </div>
-  );
-};
+class Counter extends React.Component {
+  render() {
+    let { score } = this.props;
+    return (
+      <div className="counter">
+        <button className="counter-action decrement">-</button>
+        <span className="counter-score">{score}</span>
+        <button className="counter-action increment">+</button>
+      </div>
+    );
+  }
+}
 
 const App = (prop) => {
-  console.log(prop);
   return (
     <div className="scoreboard">
       <Header title="Scoreboard" totalPlayers={prop.initPlayers.length} />
